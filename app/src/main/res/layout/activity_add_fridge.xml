@@ -1,0 +1,1202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.AddFridgeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_20sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lay_first"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                fontPath="@string/medium_font"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="Agent"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black" />
+
+                            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.7"
+                                card_view:cardBackgroundColor="@android:color/white"
+                                card_view:cardCornerRadius="6dp"
+                                card_view:cardElevation="2dp"
+                                card_view:cardUseCompatPadding="true">
+
+                                <TextView
+                                    android:id="@+id/edtDocId"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_36sdp"
+                                    android:background="@android:color/transparent"
+                                    android:gravity="center_vertical"
+                                    android:inputType="text"
+                                    android:paddingRight="@dimen/_7sdp"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/gray" />
+                            </android.support.v7.widget.CardView>
+
+                            <!--<TextView
+                                fontPath="@string/medium_font"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="Revision Number"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black" />-->
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+
+                            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:visibility="gone"
+                                card_view:cardBackgroundColor="@android:color/white"
+                                card_view:cardCornerRadius="6dp"
+                                card_view:cardElevation="2dp"
+                                card_view:cardUseCompatPadding="true">
+
+                                <TextView
+                                    android:id="@+id/edtRevisionNo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_36sdp"
+                                    android:background="@android:color/transparent"
+                                    android:gravity="center_vertical"
+                                    android:inputType="text"
+                                    android:paddingLeft="@dimen/_7sdp"
+                                    android:paddingRight="@dimen/_7sdp"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/gray" />
+                            </android.support.v7.widget.CardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                fontPath="@string/medium_font"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="Effective Date"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black" />
+
+                            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:layout_weight="0.7"
+                                card_view:cardBackgroundColor="@android:color/white"
+                                card_view:cardCornerRadius="6dp"
+                                card_view:cardElevation="2dp"
+                                card_view:cardUseCompatPadding="true">
+
+                                <TextView
+                                    android:id="@+id/edtEffectiveDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_36sdp"
+                                    android:background="@android:color/transparent"
+                                    android:gravity="center_vertical"
+                                    android:inputType="date"
+                                    android:paddingLeft="@dimen/_7sdp"
+                                    android:paddingRight="@dimen/_7sdp"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/gray" />
+                            </android.support.v7.widget.CardView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/titleOutletName"
+                            fontPath="@string/medium_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="Outlet Name"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black" />
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="6dp"
+                            card_view:cardElevation="2dp"
+                            card_view:cardUseCompatPadding="true">
+
+                            <EditText
+                                android:id="@+id/et_outlet_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_36sdp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:inputType="text"
+                                android:paddingLeft="@dimen/_7sdp"
+                                android:paddingRight="@dimen/_7sdp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray" />
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/titleCustomerName"
+                            fontPath="@string/medium_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="Outlet Name"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black" />
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="6dp"
+                            card_view:cardElevation="2dp"
+                            card_view:cardUseCompatPadding="true">
+
+                            <EditText
+                                android:id="@+id/et_customer_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_36sdp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:inputType="text"
+                                android:paddingLeft="@dimen/_7sdp"
+                                android:paddingRight="@dimen/_7sdp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray" />
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/titleAddress2"
+                        fontPath="@string/medium_font"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_6sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:text="Address2"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/black"
+                        android:visibility="gone" />
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:visibility="gone"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="6dp"
+                        card_view:cardElevation="2dp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <EditText
+                            android:id="@+id/et_customer_address2"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_36sdp"
+                            android:background="@android:color/transparent"
+                            android:gravity="center_vertical"
+                            android:hint="e.g. Kampala, Uganda"
+                            android:paddingLeft="@dimen/_7sdp"
+                            android:paddingRight="@dimen/_7sdp"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray" />
+                    </android.support.v7.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/titleOwnername"
+                            fontPath="@string/medium_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="Owner Name"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black" />
+
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="6dp"
+                            card_view:cardElevation="2dp"
+                            card_view:cardUseCompatPadding="true">
+
+                            <EditText
+                                android:id="@+id/et_owner_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_36sdp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:inputType="text"
+                                android:paddingLeft="@dimen/_7sdp"
+                                android:paddingRight="@dimen/_7sdp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray" />
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/titlePhone"
+                            fontPath="@string/medium_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="Contact Number"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black" />
+
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="6dp"
+                            card_view:cardElevation="2dp"
+                            card_view:cardUseCompatPadding="true">
+
+                            <EditText
+                                android:id="@+id/et_customer_telephone"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_36sdp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:inputType="phone"
+                                android:maxLength="10"
+                                android:paddingLeft="@dimen/_7sdp"
+                                android:paddingRight="@dimen/_7sdp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray" />
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:background="@color/gray_divider"
+                        android:orientation="vertical"
+                        android:visibility="gone"></LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/titleAddress"
+                            fontPath="@string/medium_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="Road/Street"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black" />
+
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_weight="0.7"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="6dp"
+                            card_view:cardElevation="2dp"
+                            card_view:cardUseCompatPadding="true">
+
+                            <EditText
+                                android:id="@+id/et_postal_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_36sdp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:inputType="text"
+                                android:paddingLeft="@dimen/_7sdp"
+                                android:paddingRight="@dimen/_7sdp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray" />
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:background="@color/gray_divider"
+                        android:orientation="vertical"
+                        android:visibility="gone"></LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/titleLandmark"
+                            fontPath="@string/medium_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="Landmark"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black" />
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="6dp"
+                            card_view:cardElevation="2dp"
+                            card_view:cardUseCompatPadding="true">
+
+                            <EditText
+                                android:id="@+id/et_landmark"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_36sdp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:inputType="text"
+                                android:paddingLeft="@dimen/_7sdp"
+                                android:paddingRight="@dimen/_7sdp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray" />
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/titleLocation"
+                            fontPath="@string/medium_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="Town/Village"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black" />
+
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="6dp"
+                            card_view:cardElevation="2dp"
+                            card_view:cardUseCompatPadding="true">
+
+                            <EditText
+                                android:id="@+id/et_location"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_36sdp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:inputType="text"
+                                android:paddingLeft="@dimen/_7sdp"
+                                android:paddingRight="@dimen/_7sdp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray" />
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/titleoutlettype"
+                            fontPath="@string/medium_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="Outlet Type"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:visibility="visible"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="6dp"
+                            card_view:cardElevation="2dp"
+                            card_view:cardUseCompatPadding="true">
+
+                            <TextView
+                                android:id="@+id/et_outletType"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_36sdp"
+                                android:background="@android:color/transparent"
+                                android:drawableRight="@drawable/ic_keyboard_arrow_down"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/_7sdp"
+                                android:paddingRight="@dimen/_7sdp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray" />
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lay_specific"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/titleother"
+                            fontPath="@string/medium_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_weight="1"
+                            android:text="Specify if Other Type"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black" />
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="6dp"
+                            card_view:cardElevation="2dp"
+                            card_view:cardUseCompatPadding="true">
+
+                            <EditText
+                                android:id="@+id/et_outlet_other_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_36sdp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/_7sdp"
+                                android:paddingRight="@dimen/_7sdp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray" />
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/titlecooler"
+                            fontPath="@string/medium_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_weight="1"
+                            android:text="Existing Cooler"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:id="@+id/ccheck"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/chk_cc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CC">
+
+                            </CheckBox>
+
+                            <CheckBox
+                                android:id="@+id/chk_pc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:text="PC">
+
+                            </CheckBox>
+
+                            <CheckBox
+                                android:id="@+id/chk_hi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:text="HI">
+
+                            </CheckBox>
+
+                            <CheckBox
+                                android:id="@+id/chk_own"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:text="Own">
+
+                            </CheckBox>
+
+                            <CheckBox
+                                android:id="@+id/chk_others"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:text="Others">
+
+                            </CheckBox>
+                        </LinearLayout>
+
+
+                        <!-- <TextView
+                             android:id="@+id/et_cooler"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_36sdp"
+                             android:background="@android:color/transparent"
+                             android:drawableRight="@drawable/ic_keyboard_arrow_down"
+                             android:gravity="center_vertical"
+                             android:paddingLeft="@dimen/_7sdp"
+                             android:paddingRight="@dimen/_7sdp"
+                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                             android:textColor="@color/black"
+                             android:textColorHint="@color/gray" />-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/titleshare"
+                            fontPath="@string/medium_font"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:text="Stock share with competitor in %"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black" />
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="6dp"
+                            card_view:cardElevation="2dp"
+                            card_view:cardUseCompatPadding="true">
+
+                            <EditText
+                                android:id="@+id/et_share"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_36sdp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:inputType="phone"
+                                android:maxLength="2"
+                                android:paddingLeft="@dimen/_7sdp"
+                                android:paddingRight="@dimen/_7sdp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray" />
+                        </android.support.v7.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/titlesale"
+                            fontPath="@string/medium_font"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:text="Outlet weekly sale volume (UGX)"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tileCurrent"
+                                fontPath="@string/medium_font"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="Current Sale"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black" />
+
+                            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:layout_weight="0.5"
+                                card_view:cardBackgroundColor="@android:color/white"
+                                card_view:cardCornerRadius="6dp"
+                                card_view:cardElevation="2dp"
+                                card_view:cardUseCompatPadding="true">
+
+                                <EditText
+                                    android:id="@+id/et_current_sale"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_36sdp"
+                                    android:background="@android:color/transparent"
+                                    android:gravity="center_vertical"
+                                    android:inputType="number"
+                                    android:paddingLeft="@dimen/_7sdp"
+                                    android:paddingRight="@dimen/_7sdp"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/gray" />
+                            </android.support.v7.widget.CardView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tileExpected"
+                                fontPath="@string/medium_font"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="Expected Sale"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black" />
+
+                            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_weight="0.5"
+                                card_view:cardBackgroundColor="@android:color/white"
+                                card_view:cardCornerRadius="6dp"
+                                card_view:cardElevation="2dp"
+                                card_view:cardUseCompatPadding="true">
+
+                                <EditText
+                                    android:id="@+id/et_expected_sale"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_36sdp"
+                                    android:background="@android:color/transparent"
+                                    android:gravity="center_vertical"
+                                    android:inputType="number"
+                                    android:paddingLeft="@dimen/_7sdp"
+                                    android:paddingRight="@dimen/_7sdp"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/gray" />
+                            </android.support.v7.widget.CardView>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/titlecoolersize"
+                            fontPath="@string/medium_font"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:text="Available Chiller Size"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black" />
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="6dp"
+                            card_view:cardElevation="2dp"
+                            card_view:cardUseCompatPadding="true">
+
+                            <TextView
+                                android:id="@+id/et_cooler_size"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_36sdp"
+                                android:background="@android:color/transparent"
+                                android:drawableRight="@drawable/ic_keyboard_arrow_down"
+                                android:paddingLeft="@dimen/_7sdp"
+                                android:paddingRight="@dimen/_7sdp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray" />
+
+                            <!-- <EditText
+                                 android:id="@+id/et_cooler_size"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="@dimen/_36sdp"
+                                 android:background="@android:color/transparent"
+                                 android:gravity="center_vertical"
+                                 android:inputType="number"
+                                 android:paddingLeft="@dimen/_7sdp"
+                                 android:paddingRight="@dimen/_7sdp"
+                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                 android:textColor="@color/black"
+                                 android:textColorHint="@color/gray" />-->
+                        </android.support.v7.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/titledisplaylocation"
+                            fontPath="@string/medium_font"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:text="Display Location"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioGroup
+                                android:id="@+id/radiolocation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/ra_inside_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_8sdp"
+                                    android:checked="true"
+                                    android:text="Inside" />
+
+                                <RadioButton
+                                    android:id="@+id/ra_outside_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:text="Outside" />
+
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tileNational"
+                                fontPath="@string/medium_font"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.7"
+                                android:text="Chiller Safety Gril/KEG installed"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black"
+                                android:visibility="visible" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioGroup
+                                    android:id="@+id/radioGender"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <RadioButton
+                                        android:id="@+id/ra_yes_id"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_10sdp"
+                                        android:text="Yes" />
+
+                                    <RadioButton
+                                        android:id="@+id/ra_no_id"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_10sdp"
+                                        android:text="No" />
+
+                                    <RadioButton
+                                        android:id="@+id/ra_na_id"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_10sdp"
+                                        android:checked="true"
+                                        android:text="NA" />
+                                </RadioGroup>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+                        <!--<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:visibility="gone"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="6dp"
+                            card_view:cardElevation="2dp"
+                            card_view:cardUseCompatPadding="true">-->
+
+                        <!-- <TextView
+                             android:id="@+id/et_display_location"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_36sdp"
+                             android:background="@android:color/transparent"
+                             android:drawableRight="@drawable/ic_keyboard_arrow_down"
+                             android:gravity="center_vertical"
+                             android:paddingLeft="@dimen/_7sdp"
+                             android:paddingRight="@dimen/_7sdp"
+                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                             android:textColor="@color/black"
+                             android:textColorHint="@color/gray" />
+                     </android.support.v7.widget.CardView>
+
+                     <TextView
+                         android:id="@+id/titlenewplacement"
+                         fontPath="@string/medium_font"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="@dimen/_4sdp"
+                         android:text="New placement requested by:"
+                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                         android:textColor="@color/black"
+                         android:visibility="visible" />
+
+                     <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                         xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="@dimen/_2sdp"
+                         android:visibility="visible"
+                         card_view:cardBackgroundColor="@android:color/white"
+                         card_view:cardCornerRadius="6dp"
+                         card_view:cardElevation="2dp"
+                         card_view:cardUseCompatPadding="true">
+
+                         <TextView
+                             android:id="@+id/et_placement_request"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_36sdp"
+                             android:background="@android:color/transparent"
+                             android:drawableRight="@drawable/ic_keyboard_arrow_down"
+                             android:gravity="center_vertical"
+                             android:paddingLeft="@dimen/_7sdp"
+                             android:paddingRight="@dimen/_7sdp"
+                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                             android:textColor="@color/black"
+                             android:textColorHint="@color/gray" />
+                     </android.support.v7.widget.CardView>-->
+
+                        <!-- <TextView
+                             android:id="@+id/titleagentnmae"
+                             fontPath="@string/medium_font"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="@dimen/_4sdp"
+                             android:text="Name"
+                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                             android:textColor="@color/black" />
+
+                         <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="@dimen/_2sdp"
+                             card_view:cardBackgroundColor="@android:color/white"
+                             card_view:cardCornerRadius="6dp"
+                             card_view:cardElevation="2dp"
+                             card_view:cardUseCompatPadding="true">
+
+                             <EditText
+                                 android:id="@+id/et_agent_name"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="@dimen/_36sdp"
+                                 android:background="@android:color/transparent"
+                                 android:gravity="center_vertical"
+                                 android:inputType="text"
+                                 android:paddingLeft="@dimen/_7sdp"
+                                 android:paddingRight="@dimen/_7sdp"
+                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                 android:textColor="@color/black"
+                                 android:textColorHint="@color/gray" />
+                         </android.support.v7.widget.CardView>
+
+                         <TextView
+                             android:id="@+id/titleagentdate"
+                             fontPath="@string/medium_font"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="@dimen/_4sdp"
+                             android:text="Date"
+                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                             android:textColor="@color/black" />
+
+                         <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="@dimen/_2sdp"
+                             card_view:cardBackgroundColor="@android:color/white"
+                             card_view:cardCornerRadius="6dp"
+                             card_view:cardElevation="2dp"
+                             card_view:cardUseCompatPadding="true">
+
+                             <EditText
+                                 android:focusable="false"
+                                 android:id="@+id/et_agent_date"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="@dimen/_36sdp"
+                                 android:background="@android:color/transparent"
+                                 android:gravity="center_vertical"
+                                 android:inputType="date"
+                                 android:paddingLeft="@dimen/_7sdp"
+                                 android:paddingRight="@dimen/_7sdp"
+                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                 android:textColor="@color/black"
+                                 android:textColorHint="@color/gray" />
+                         </android.support.v7.widget.CardView>
+
+                         <TextView
+                             android:id="@+id/coommnt"
+                             fontPath="@string/medium_font"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="@dimen/_4sdp"
+                             android:text="Comments by sales manager"
+                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                             android:textColor="@color/black" />
+
+                         <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="@dimen/_2sdp"
+                             android:layout_marginBottom="@dimen/_10sdp"
+                             card_view:cardBackgroundColor="@android:color/white"
+                             card_view:cardCornerRadius="6dp"
+                             card_view:cardElevation="2dp"
+                             card_view:cardUseCompatPadding="true">
+
+                             <EditText
+                                 android:id="@+id/et_cmt"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="@dimen/_36sdp"
+                                 android:background="@android:color/transparent"
+                                 android:gravity="center_vertical"
+                                 android:hint=""
+                                 android:inputType="textMultiLine"
+                                 android:paddingLeft="@dimen/_7sdp"
+                                 android:paddingRight="@dimen/_7sdp"
+                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                 android:textColor="@color/black"
+                                 android:textColorHint="@color/gray" />
+                         </android.support.v7.widget.CardView>-->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/btnTransferNext"
+                            fontPath="@string/bold_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="36dp"
+                            android:layout_marginRight="36dp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@drawable/btn_red"
+                            android:gravity="center"
+                            android:text="Next"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/colorWhite" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+        <!--  <android.support.design.widget.FloatingActionButton
+              android:id="@+id/btnTransferNext"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_alignParentBottom="true"
+              android:layout_marginRight="@dimen/_10sdp"
+              android:layout_marginBottom="5dp"
+              android:src="@drawable/ic_arrow_next" />-->
+
+
+    </RelativeLayout>
+</layout>

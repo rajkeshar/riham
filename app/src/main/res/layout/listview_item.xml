@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvtext_item"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp"
+            android:text="Height"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/dark_grey" />
+
+    </LinearLayout>
+
+</layout>

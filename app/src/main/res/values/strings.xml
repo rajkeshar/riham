@@ -1,0 +1,142 @@
+<resources>
+    <string name="app_name">Riham</string>
+
+    <string name="regular_font">fonts/Roboto-Regular.ttf</string>
+    <string name="bold_font">fonts/Roboto-Bold.ttf</string>
+    <string name="medium_font">fonts/Roboto-Medium.ttf</string>
+    <string name="action_search">Search</string>
+
+    <string name="login">Login</string>
+    <string name="userName">Username</string>
+    <string name="password">Password</string>
+    <string name="forgotPwd">Forgot Password?</string>
+    <string name="nav_attendanceIn">Attendance In</string>
+    <string name="nav_attendanceOut">Attendance Out</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_inventory">Manage Inventory</string>
+    <string name="nav_loadRequest">Depo Supply</string>
+    <string name="nav_salesmanLoad">Salesman Load</string>
+    <string name="nav_journey">Journey Plan</string>
+    <string name="nav_customer">Customers</string>
+    <string name="nav_chiller">Chiller</string>
+    <string name="nav_service_visit">Service Visit</string>
+    <string name="nav_payment">Payment</string>
+    <string name="nav_form">Forms</string>
+    <string name="nav_print">Data Posting Audit</string>
+    <string name="nav_deliveryList">Delivery Confirm</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_logout">Logout</string>
+    <string name="nav_pendingBD">Pending BD</string>
+    <string name="tab_Home">Dashboard</string>
+    <string name="tab_journey">Journey Plan</string>
+    <string name="tab_Competitor">Competitor Information</string>
+    <string name="tab_Lunches">New Lunches</string>
+    <string name="tab_catalog">Product Catalog</string>
+    <string name="tab_promotional">Promotional Accountablity</string>
+    <string name="tab_Sensor">Sensory Evaluation</string>
+    <string name="tab_advertisment">Advertising</string>
+    <string name="tab_Eods">EOD</string>
+
+    <string name="closeDrawer">Navigation View</string>
+    <string name="openDrawer">Navigation View Closed</string>
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles_own">
+
+        <item>Home</item>
+        <item>Manage Inventory</item>
+        <item>Journey Plan</item>
+        <item>Payments</item>
+        <!-- <item>Route Recone</item>-->
+        <!--<item>Sales Snap</item>-->
+        <item>Data Posting Audit</item>
+        <!--<item>Catalogue</item>-->
+        <item>Settings</item>
+        <item>Rate This App</item>
+        <item>Suggestions</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    // Add Customer
+    <string name="add_customer">Add Customer</string>
+    <string name="beginday_route">Route # </string>
+    <string name="sales_area">Sales Area</string>
+    <string name="fax">Fax</string>
+    <string name="telephone">Telephone</string>
+    <string name="telephone2">Other Telephone</string>
+    <string name="email">Email</string>
+    <string name="tv_cust_detail2">PO box</string>
+    <string name="crno">TIN No</string>
+    <string name="customer_address2">Street</string>
+    <string name="trade_name_ar">Trade Name (Ar)</string>
+    <string name="customer_address1">Area</string>
+    <string name="trade_name">Trade Name</string>
+    <string name="outlet_name">Outlet Name</string>
+    <string name="owner_name">Customer Name</string>
+    <string name="owner_name_ar">Outlet Name <i>(Ar)</i></string>
+    <string name="customerid">Customer ID</string>
+    <string name="hint_cr_no"><i>eg. 12345</i></string>
+    <string name="hint_outlet_name"><i>eg. Supermarket</i></string>
+    <string name="hint_customer_name"><i>eg. John Doe</i></string>
+    <string name="hint_customer_address1"><i>eg. Plot 32/33, Bombo Road</i></string>
+    <string name="hint_customer_address2"><i>eg. London City</i></string>
+    <string name="hint_customer_pobox"><i>eg. 12345</i></string>
+    <string name="hint_customer_email"><i>eg. abc@xyz.com</i></string>
+    <string name="hint_customer_phone"><i>eg. 0966xxxxxxx</i></string>
+    <string name="hint_customer_fax"><i>eg. 12345678</i></string>
+    <string name="berain">Berain</string>
+    <string name="select_category">Select Category</string>
+    <string name="select_reason">Select Reason</string>
+    <string name="requiredFields">Please fill all the required fields</string>
+    <string name="city">City</string>
+
+    <string name="tab_load">Load</string>
+    <string name="tab_load_req">Load Request</string>
+    <string name="tab_van_stock">Van Stock</string>
+    <string name="tab_unload">Unload</string>
+    <string name="loading">Loading…</string>
+    <string name="title_StoreName">Store Name</string>
+    <string name="title_StoreBrands">Store Check Brands</string>
+
+    <string name="enter_username">Please enter username</string>
+    <string name="enter_password">Please enter password</string>
+    <string name="internet_available_msg">There is no internet connection on the device. Please check the connection and try again.</string>
+    <string name="internet_available_title">No Connection</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="logout_msg">Are you sure you want to logout?</string>
+    <string name="title_activity_merchant_dashboard">MerchantDashboardActivity</string>
+    <string name="debit_invoice">Debit invoice should not be collected</string>
+
+
+    <string name="docnumber">Document Number</string>
+
+    <string name="txt_cooler_condition">Cooler Condition Before Cleaning<font color='#FF0000'>*</font></string>
+    <string name="machine_condition">Is Machine in Working cond.<font color='#FF0000'>*</font></string>
+    <string name="cleanless">Cleanliness<font color='#FF0000'>*</font></string>
+    <string name="coil">Condensor Coil cleand<font color='#FF0000'>*</font></string>
+    <string name="stock">Stock Availability in %<font color='#FF0000'>*</font></string>
+    <string name="current_volt">Current Voltage Volt<font color='#FF0000'>*</font></string>
+    <string name="amps">Amps AMP<font color='#FF0000'>*</font></string>
+    <string name="temprature">Cabin Temperature*C<font color='#FF0000'>*</font></string>
+    <string name="work_status">Work Status :<font color='#FF0000'>*</font></string>
+    <string name="work_done">Work Done Detail :<font color='#FF0000'>*</font></string>
+    <string name="customer_sign">Customer Signature<font color='#FF0000'>*</font></string>
+    <string name="tech_rating">Customer Rating on Technician Behaviour<font color='#FF0000'>*</font></string>
+    <string name="purpose_visit">Purpose Of Visit<font color='#FF0000'>*</font></string>
+    <string name="ticket_no">Ticket No<font color='#FF0000'>*</font></string>
+    <string name="cts_status">CTS Status<font color='#FF0000'>*</font></string>
+    <string name="seriall_no">Serial Number<font color='#FF0000'>*</font></string>
+    <string name="model">Model<font color='#FF0000'>*</font></string>
+    <string name="asset_image">Asset Plate/Serial Number Image<font color='#FF0000'>*</font></string>
+    <string name="outlet_names">Outlet Name<font color='#FF0000'>*</font></string>
+    <string name="owner_names">Owner Name<font color='#FF0000'>*</font></string>
+    <string name="landmark_s">Landmark<font color='#FF0000'>*</font></string>
+    <string name="road">Road/Street<font color='#FF0000'>*</font></string>
+    <string name="town">Town/Village<font color='#FF0000'>*</font></string>
+    <string name="conatct">Contact Number<font color='#FF0000'>*</font></string>
+    <string name="conatct_2">Contact Number2<font color='#FF0000'>*</font></string>
+    <string name="conattct_pers">Contact Person<font color='#FF0000'>*</font></string>
+    <string name="district">District<font color='#FF0000'>*</font></string>
+</resources>

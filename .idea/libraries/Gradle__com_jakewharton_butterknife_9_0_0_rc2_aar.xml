@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: com.jakewharton:butterknife:9.0.0-rc2@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f26add1cf6c655f31368a23fab8a2b5a/butterknife-9.0.0-rc2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2ad299e8458a9e4526524fe303ae3c3a/butterknife-9.0.0-rc2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/50ca9b318b20959688d43503623943ee/transformed/butterknife-9.0.0-rc2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/50ca9b318b20959688d43503623943ee/transformed/butterknife-9.0.0-rc2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/50ca9b318b20959688d43503623943ee/transformed/butterknife-9.0.0-rc2/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/9.0.0-rc2/278ff815a2c1338f4167840e282a171875d2d59b/butterknife-9.0.0-rc2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/9.0.0-rc2/721b468824c0f6ccdca04e20cbd1042b1a3ae9af/butterknife-9.0.0-rc2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

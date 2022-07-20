@@ -1,0 +1,1213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.AddNewCustomerActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_20sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_28sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@color/prog_3"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/titleoutlettype"
+                            fontPath="@string/medium_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:gravity="center"
+                            android:text="Placement Approvals"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <CheckBox
+                            android:id="@+id/chkManager"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Manager-Sales &amp;Marketing/Key Acoounts" />
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/card_pepsiType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginRight="@dimen/_2sdp"
+                            android:visibility="visible"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="6dp"
+                            card_view:cardElevation="2dp"
+                            card_view:cardUseCompatPadding="true">
+
+                            <EditText
+                                android:id="@+id/et_placement_managername"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_36sdp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:hint="Name"
+                                android:inputType="phone"
+                                android:paddingLeft="@dimen/_7sdp"
+                                android:paddingRight="@dimen/_7sdp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray" />
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <CheckBox
+                            android:id="@+id/chkAssetCare"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Chiller &amp;Asset Care Manager" />
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/card_asset_manager"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginRight="@dimen/_2sdp"
+                            android:visibility="visible"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="6dp"
+                            card_view:cardElevation="2dp"
+                            card_view:cardUseCompatPadding="true">
+
+                            <EditText
+                                android:id="@+id/et_asset_manager_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_36sdp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:hint="Name"
+                                android:inputType="phone"
+                                android:paddingLeft="@dimen/_7sdp"
+                                android:paddingRight="@dimen/_7sdp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray" />
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <CheckBox
+                            android:id="@+id/chkSalesDirector"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sales &amp; Marketing Directer" />
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/card_sales_manager"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginRight="@dimen/_2sdp"
+                            android:visibility="visible"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="6dp"
+                            card_view:cardElevation="2dp"
+                            card_view:cardUseCompatPadding="true">
+
+                            <EditText
+                                android:id="@+id/et_Sales_manager_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_36sdp"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:hint="Name"
+                                android:inputType="phone"
+                                android:paddingLeft="@dimen/_7sdp"
+                                android:paddingRight="@dimen/_7sdp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray" />
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_28sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@color/prog_3"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            fontPath="@string/medium_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:gravity="center"
+                            android:text="Enclosures"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lay_qrname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tilechiller"
+                            fontPath="@string/medium_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="Add Chiller QR/Barcode Image"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lay_chiller_img"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_rectangle"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_150sdp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/layoutImagechiller"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:src="@drawable/photo" />
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="Capture Image"
+                                    android:textColor="@color/colorPrimaryDark" />
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:id="@+id/layout_pager_chiller"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+                                <android.support.v4.view.ViewPager
+                                    android:id="@+id/viewPager_chiller"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_150sdp"
+                                    android:layout_gravity="bottom"
+                                    android:clipToPadding="false" />
+
+                                <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                                    android:id="@+id/dots_indicators_chiller"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center"
+                                    android:layout_marginBottom="@dimen/_6sdp"
+                                    android:gravity="bottom"
+                                    app:dotsColor="@color/colorPrimary"
+                                    app:dotsCornerRadius="8dp"
+                                    app:dotsSize="10dp"
+                                    app:dotsSpacing="4dp"
+                                    app:dotsWidthFactor="2.5"
+                                    app:progressMode="true"
+                                    android:visibility="gone"
+                                    app:selectedDotColor="@color/colorPrimary" />
+                            </FrameLayout>
+
+                            <com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton
+                                android:id="@+id/btnAddChiller"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|end"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="14dp"
+                                android:visibility="visible"
+                                app:fabColor="@color/colorPrimary"
+                                app:fabElevation="2dp"
+                                app:fabIcon="@drawable/ic_add_white"
+                                app:fabIconPosition="start"
+                                app:fabSizes="mini"
+                                app:fabType="circle" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tileNational"
+                            fontPath="@string/medium_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="National ID"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <RadioGroup
+                                android:id="@+id/radioNational"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/ra_yes_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:text="Yes" />
+
+                                <RadioButton
+                                    android:id="@+id/ra_no_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:checked="true"
+                                    android:text="No" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lay_national_img"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_rectangle"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_150sdp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/layoutImage"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:src="@drawable/photo" />
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="Capture Image"
+                                    android:textColor="@color/colorPrimaryDark" />
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:id="@+id/layout_pager"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+                                <android.support.v4.view.ViewPager
+                                    android:id="@+id/viewPager"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_150sdp"
+                                    android:layout_gravity="bottom"
+                                    android:clipToPadding="false" />
+
+                                <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                                    android:id="@+id/dots_indicators"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center"
+                                    android:layout_marginBottom="@dimen/_6sdp"
+                                    android:gravity="bottom"
+                                    app:dotsColor="@color/colorPrimary"
+                                    app:dotsCornerRadius="8dp"
+                                    app:dotsSize="10dp"
+                                    app:dotsSpacing="4dp"
+                                    app:dotsWidthFactor="2.5"
+                                    app:progressMode="true"
+                                    android:visibility="gone"
+                                    app:selectedDotColor="@color/colorPrimary" />
+                            </FrameLayout>
+
+                            <com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton
+                                android:id="@+id/btnAddNationalId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|end"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="14dp"
+                                android:visibility="visible"
+                                app:fabColor="@color/colorPrimary"
+                                app:fabElevation="2dp"
+                                app:fabIcon="@drawable/ic_add_white"
+                                app:fabIconPosition="start"
+                                app:fabSizes="mini"
+                                app:fabType="circle" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tilePassportpic"
+                            fontPath="@string/medium_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="Passport Photo"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <RadioGroup
+                                android:id="@+id/radioPassport"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/ra_yes_passport"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:text="Yes" />
+
+                                <RadioButton
+                                    android:id="@+id/ra_no_passport"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:checked="true"
+                                    android:text="No" />
+                            </RadioGroup>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- passport -->
+                    <LinearLayout
+                        android:id="@+id/lay_passport_img"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_rectangle"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_150sdp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/layoutImagepassport"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:src="@drawable/photo" />
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="Capture Image"
+                                    android:textColor="@color/colorPrimaryDark" />
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:id="@+id/layout_passport"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+                                <android.support.v4.view.ViewPager
+                                    android:id="@+id/viewPager_passport"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_150sdp"
+                                    android:layout_gravity="bottom"
+                                    android:clipToPadding="false" />
+
+                                <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                                    android:id="@+id/dots_indicators_passport"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center"
+                                    android:layout_marginBottom="@dimen/_6sdp"
+                                    android:gravity="bottom"
+                                    app:dotsColor="@color/colorPrimary"
+                                    app:dotsCornerRadius="8dp"
+                                    app:dotsSize="10dp"
+                                    app:dotsSpacing="4dp"
+                                    app:dotsWidthFactor="2.5"
+                                    app:progressMode="true"
+                                    android:visibility="gone"
+                                    app:selectedDotColor="@color/colorPrimary" />
+                            </FrameLayout>
+
+                            <com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton
+                                android:id="@+id/btnAddPassport"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|end"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="14dp"
+                                android:visibility="visible"
+                                app:fabColor="@color/colorPrimary"
+                                app:fabElevation="2dp"
+                                app:fabIcon="@drawable/ic_add_white"
+                                app:fabIconPosition="start"
+                                app:fabSizes="mini"
+                                app:fabType="circle" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tileaddressproof"
+                            fontPath="@string/medium_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="Outlet Address Proof"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <RadioGroup
+                                android:id="@+id/radioProof"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/ra_yes_proof"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:text="Yes" />
+
+                                <RadioButton
+                                    android:id="@+id/ra_no_proof"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:checked="true"
+                                    android:text="No" />
+
+                            </RadioGroup>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Proof -->
+                    <LinearLayout
+                        android:id="@+id/lay_proof_img"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_rectangle"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_150sdp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/layoutImageproof"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:src="@drawable/photo" />
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="Capture Image"
+                                    android:textColor="@color/colorPrimaryDark" />
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:id="@+id/layout_proof"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+                                <android.support.v4.view.ViewPager
+                                    android:id="@+id/viewPager_proof"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_150sdp"
+                                    android:layout_gravity="bottom"
+                                    android:clipToPadding="false" />
+
+                                <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                                    android:id="@+id/dots_indicators_proof"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center"
+                                    android:layout_marginBottom="@dimen/_6sdp"
+                                    android:gravity="bottom"
+                                    app:dotsColor="@color/colorPrimary"
+                                    app:dotsCornerRadius="8dp"
+                                    app:dotsSize="10dp"
+                                    app:dotsSpacing="4dp"
+                                    app:dotsWidthFactor="2.5"
+                                    app:progressMode="true"
+                                    android:visibility="gone"
+                                    app:selectedDotColor="@color/colorPrimary" />
+                            </FrameLayout>
+
+                            <com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton
+                                android:id="@+id/btnAddProof"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|end"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="14dp"
+                                android:visibility="visible"
+                                app:fabColor="@color/colorPrimary"
+                                app:fabElevation="2dp"
+                                app:fabIcon="@drawable/ic_add_white"
+                                app:fabIconPosition="start"
+                                app:fabSizes="mini"
+                                app:fabType="circle" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tileStemp"
+                            fontPath="@string/medium_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="Outlet Photo"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <RadioGroup
+                                android:id="@+id/radioOutletStemp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/ra_yes_stemp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:text="Yes" />
+
+                                <RadioButton
+                                    android:id="@+id/ra_no_stemp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:checked="true"
+                                    android:text="No" />
+                            </RadioGroup>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Outlook -->
+                    <LinearLayout
+                        android:id="@+id/lay_outlet_Img"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_rectangle"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_150sdp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/layoutImageoutlook"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:src="@drawable/photo" />
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="Capture Image"
+                                    android:textColor="@color/colorPrimaryDark" />
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:id="@+id/layout_outlook"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+                                <android.support.v4.view.ViewPager
+                                    android:id="@+id/viewPager_outlook"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_150sdp"
+                                    android:layout_gravity="bottom"
+                                    android:clipToPadding="false" />
+
+                                <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                                    android:id="@+id/dots_indicators_outlook"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center"
+                                    android:layout_marginBottom="@dimen/_6sdp"
+                                    android:gravity="bottom"
+                                    app:dotsColor="@color/colorPrimary"
+                                    app:dotsCornerRadius="8dp"
+                                    app:dotsSize="10dp"
+                                    app:dotsSpacing="4dp"
+                                    app:dotsWidthFactor="2.5"
+                                    app:progressMode="true"
+                                    android:visibility="gone"
+                                    app:selectedDotColor="@color/colorPrimary" />
+                            </FrameLayout>
+
+                            <com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton
+                                android:id="@+id/btnAddOutlook"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|end"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="14dp"
+                                android:visibility="visible"
+                                app:fabColor="@color/colorPrimary"
+                                app:fabElevation="2dp"
+                                app:fabIcon="@drawable/ic_add_white"
+                                app:fabIconPosition="start"
+                                app:fabSizes="mini"
+                                app:fabType="circle" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tileLc"
+                            fontPath="@string/medium_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="LC Letter"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <RadioGroup
+                                android:id="@+id/radioLCletter"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/ra_yes_lc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:text="Yes" />
+
+                                <RadioButton
+                                    android:id="@+id/ra_no_lc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:checked="true"
+                                    android:text="No" />
+                            </RadioGroup>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- LC Letter -->
+                    <LinearLayout
+                        android:id="@+id/lay_letter_img"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_rectangle"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_150sdp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/layoutImagelc"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:src="@drawable/photo" />
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="Capture Image"
+                                    android:textColor="@color/colorPrimaryDark" />
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:id="@+id/layout_lc"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+                                <android.support.v4.view.ViewPager
+                                    android:id="@+id/viewPager_lc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_150sdp"
+                                    android:layout_gravity="bottom"
+                                    android:clipToPadding="false" />
+
+                                <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                                    android:id="@+id/dots_indicators_lc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center"
+                                    android:layout_marginBottom="@dimen/_6sdp"
+                                    android:gravity="bottom"
+                                    app:dotsColor="@color/colorPrimary"
+                                    app:dotsCornerRadius="8dp"
+                                    app:dotsSize="10dp"
+                                    app:dotsSpacing="4dp"
+                                    app:dotsWidthFactor="2.5"
+                                    app:progressMode="true"
+                                    android:visibility="gone"
+                                    app:selectedDotColor="@color/colorPrimary" />
+                            </FrameLayout>
+
+                            <com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton
+                                android:id="@+id/btnAddLC"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|end"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="14dp"
+                                android:visibility="visible"
+                                app:fabColor="@color/colorPrimary"
+                                app:fabElevation="2dp"
+                                app:fabIcon="@drawable/ic_add_white"
+                                app:fabIconPosition="start"
+                                app:fabSizes="mini"
+                                app:fabType="circle" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tilelicence"
+                            fontPath="@string/medium_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="Trading Licence"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <RadioGroup
+                                android:id="@+id/radioTrading"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/ra_yes_treding"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:text="Yes" />
+
+                                <RadioButton
+                                    android:id="@+id/ra_no_treding"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:checked="true"
+                                    android:text="No" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <!-- TREADING -->
+                    <LinearLayout
+                        android:id="@+id/lay_Licence_img"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_rectangle"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_150sdp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/layoutImagetreading"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:src="@drawable/photo" />
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="Capture Image"
+                                    android:textColor="@color/colorPrimaryDark" />
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:id="@+id/layout_treading"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+                                <android.support.v4.view.ViewPager
+                                    android:id="@+id/viewPager_treading"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_150sdp"
+                                    android:layout_gravity="bottom"
+                                    android:clipToPadding="false" />
+
+                                <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                                    android:id="@+id/dots_indicators_treading"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center"
+                                    android:layout_marginBottom="@dimen/_6sdp"
+                                    android:gravity="bottom"
+                                    app:dotsColor="@color/colorPrimary"
+                                    app:dotsCornerRadius="8dp"
+                                    app:dotsSize="10dp"
+                                    app:dotsSpacing="4dp"
+                                    app:dotsWidthFactor="2.5"
+                                    app:progressMode="true"
+                                    android:visibility="gone"
+                                    app:selectedDotColor="@color/colorPrimary" />
+                            </FrameLayout>
+
+                            <com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton
+                                android:id="@+id/btnAddTreading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|end"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="14dp"
+                                android:visibility="visible"
+                                app:fabColor="@color/colorPrimary"
+                                app:fabElevation="2dp"
+                                app:fabIcon="@drawable/ic_add_white"
+                                app:fabIconPosition="start"
+                                app:fabSizes="mini"
+                                app:fabType="circle" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <!--Signature-->
+
+                       <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    fontPath="@string/medium_font"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:text="Customer Signature"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/black" />
+
+                                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_48sdp"
+                                    android:layout_weight="0.5"
+                                    card_view:cardBackgroundColor="@android:color/white"
+                                    card_view:cardCornerRadius="6dp"
+                                    card_view:cardElevation="2dp"
+                                    card_view:cardUseCompatPadding="true">
+
+                                    <ImageView
+                                        android:id="@+id/et_bh_signature"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_36sdp"
+                                        android:background="@android:color/transparent"
+                                        android:gravity="center_vertical"
+                                        android:inputType="text"
+                                        android:paddingLeft="@dimen/_7sdp"
+                                        android:paddingRight="@dimen/_7sdp"
+                                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/gray" />
+                                </android.support.v7.widget.CardView>
+
+                            </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/btnTransferPre"
+                            fontPath="@string/bold_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_red"
+                            android:gravity="center"
+                            android:text="Previous"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/btnTransferNext"
+                            fontPath="@string/bold_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_red"
+                            android:gravity="center"
+                            android:text="SUBMIT"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/colorWhite" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+        <!-- <android.support.design.widget.FloatingActionButton
+             android:id="@+id/btnTransferNext"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentEnd="true"
+             android:layout_alignParentBottom="true"
+             android:layout_marginRight="@dimen/_10sdp"
+             android:layout_marginBottom="5dp"
+             android:src="@drawable/ic_arrow_next" />-->
+
+    </RelativeLayout>
+</layout>

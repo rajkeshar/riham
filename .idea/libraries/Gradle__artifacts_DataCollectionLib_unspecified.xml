@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: artifacts:DataCollectionLib:unspecified">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/DataCollectionLib/build/.transforms/865cd73d2b8b20ff20fe83d431ec984a/transformed/DataCollection/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/DataCollectionLib/build/.transforms/865cd73d2b8b20ff20fe83d431ec984a/transformed/DataCollection/res" />
+      <root url="file://$PROJECT_DIR$/DataCollectionLib/build/.transforms/865cd73d2b8b20ff20fe83d431ec984a/transformed/DataCollection/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

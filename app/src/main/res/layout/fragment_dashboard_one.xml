@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Fragments.FragmentDashboardOne">
+
+    <RelativeLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_200">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_10sdp"
+                        card_view:cardElevation="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <LinearLayout
+                                android:id="@+id/llSwitch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                                <Button
+                                    android:id="@+id/btn_test_print"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Test Print"
+                                    android:visibility="gone" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/llSwitch"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_margin="@dimen/_10sdp"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+
+                                <!-- Central cirle view -->
+                                <RelativeLayout
+                                    android:id="@+id/rl_circle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/collapsingToolbar"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center_horizontal"
+                                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                                    <com.mobiato.sfa.views.TwoLevelCircularProgressBar
+                                        android:id="@+id/progressMain"
+                                        android:layout_width="@dimen/_200sdp"
+                                        android:layout_height="@dimen/_200sdp"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_centerVertical="true"
+                                        app:tlcp_bg_color="@color/prog_3"
+                                        app:tlcp_progress="40"
+                                        app:tlcp_progress2="80"
+                                        app:tlcp_progress2_color="@color/prog_2"
+                                        app:tlcp_progress_color="@color/prog_1"
+                                        app:tlcp_strokeWidth="20dp" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_centerVertical="true"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/img_dollar"
+                                            android:layout_width="@dimen/_40sdp"
+                                            android:layout_height="@dimen/_40sdp"
+                                            android:layout_above="@+id/txt_center"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_gravity="center"
+                                            android:background="@drawable/ic_icon_collection" />
+
+                                        <TextView
+                                            android:id="@+id/txtMainSell"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:nestedScrollingEnabled="false"
+                                            android:scrollbars="none"
+                                            android:text="70k"
+                                            android:textColor="@color/prog_1"
+                                            android:textSize="@dimen/_38sdp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/txt_middle_small"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="of 1020"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_20sdp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_bottom_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:descendantFocusability="blocksDescendants"
+                                    android:orientation="vertical">
+
+                                    <!-- Left and Right circle -->
+                                    <LinearLayout
+                                        android:id="@+id/two_progress"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/rl_circle"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <!-- Right side -->
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="horizontal"
+                                            android:weightSum="2">
+
+                                            <RelativeLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+
+                                                <com.mobiato.sfa.views.TwoLevelCircularProgressBar
+                                                    android:id="@+id/progressSell"
+                                                    android:layout_width="@dimen/_40sdp"
+                                                    android:layout_height="@dimen/_40sdp"
+                                                    android:layout_centerHorizontal="true"
+                                                    android:layout_centerVertical="true"
+                                                    app:tlcp_bg_color="@color/prog_3"
+                                                    app:tlcp_progress="40"
+                                                    app:tlcp_progress2="80"
+                                                    app:tlcp_progress_color="@color/prog_1"
+                                                    app:tlcp_strokeWidth="8dp" />
+
+                                                <ImageView
+                                                    android:layout_width="@dimen/_20sdp"
+                                                    android:layout_height="@dimen/_20sdp"
+                                                    android:layout_centerHorizontal="true"
+                                                    android:layout_centerVertical="true"
+                                                    android:background="@drawable/icon_collection_filled" />
+                                            </RelativeLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:id="@+id/txtSell"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="left"
+                                                    android:gravity="center"
+                                                    android:text="70k"
+                                                    android:textColor="@color/prog_1"
+                                                    android:textSize="@dimen/_17sdp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:id="@+id/txt_desc_left"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="Lerm"
+                                                    android:textColor="@color/gray"
+                                                    android:textSize="@dimen/_11sdp"
+                                                    android:visibility="gone" />
+
+                                                <TextView
+                                                    android:id="@+id/txt_desc_left_sale"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="SALE"
+                                                    android:textColor="@color/color_4"
+                                                    android:textSize="@dimen/_10sdp" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                        <!-- Left side -->
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="horizontal"
+                                            android:weightSum="2">
+
+                                            <RelativeLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+
+                                                <com.mobiato.sfa.views.TwoLevelCircularProgressBar
+                                                    android:id="@+id/progressCollection"
+                                                    android:layout_width="@dimen/_40sdp"
+                                                    android:layout_height="@dimen/_40sdp"
+                                                    android:layout_centerHorizontal="true"
+                                                    android:layout_centerVertical="true"
+                                                    app:tlcp_bg_color="@color/prog_3"
+                                                    app:tlcp_progress="40"
+                                                    app:tlcp_progress2="80"
+                                                    app:tlcp_progress2_color="@color/prog_2"
+                                                    app:tlcp_progress_color="@color/prog_3"
+                                                    app:tlcp_strokeWidth="8dp" />
+
+                                                <ImageView
+                                                    android:layout_width="@dimen/_20sdp"
+                                                    android:layout_height="@dimen/_20sdp"
+                                                    android:layout_centerHorizontal="true"
+                                                    android:layout_centerVertical="true"
+                                                    android:background="@drawable/icon_collection_filled" />
+                                            </RelativeLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:id="@+id/txtCollection"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="left"
+                                                    android:gravity="center"
+                                                    android:text="57k"
+                                                    android:textColor="@color/prog_1"
+                                                    android:textSize="@dimen/_17sdp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:id="@+id/txt_desc_right"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="Lerm"
+                                                    android:textColor="@color/gray"
+                                                    android:textSize="@dimen/_11sdp"
+                                                    android:visibility="gone" />
+
+                                                <TextView
+                                                    android:id="@+id/txt_desc_left_coll"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="Quantity"
+                                                    android:textColor="@color/color_4"
+                                                    android:textSize="@dimen/_10sdp" />
+
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <!-- Last bottom only text with up down arrows-->
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <!-- DATE TAG -->
+                        <RelativeLayout
+                            android:id="@+id/rl_date_tag"
+                            android:layout_width="190dp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@color/color_4"
+                            android:rotation="-20">
+
+                            <TextView
+                                android:id="@+id/txtDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:background="@drawable/ic_bg_new"
+                                android:paddingLeft="@dimen/_10sdp"
+                                android:text="29/07/2017"
+                                android:textColor="@color/white_100"
+                                android:textSize="@dimen/_14sdp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                </RelativeLayout>
+            </ScrollView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+</layout>
+
+

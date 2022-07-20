@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.servicevisit.ServiceVisitThreeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/ticketNo"
+                    fontPath="@string/medium_font"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Ticket No: "
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/black"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nature Of Call :"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_16sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/et_pm_nature_call"
+                    fontPath="@string/medium_font"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:gravity="left"
+                    android:maxEms="12"
+                    android:text="No cooling Door broken "
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <LinearLayout
+                    android:id="@+id/viewObservation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="Observation :"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        fontPath="@string/medium_font"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:layout_marginBottom="@dimen/_6sdp"
+                        android:gravity="left"
+                        android:maxEms="12"
+                        android:text="@string/current_volt"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <EditText
+                        android:id="@+id/edt_pm_voltage"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_38sdp"
+                        android:background="@drawable/rounded_row_cust"
+                        android:ems="3"
+                        android:hint="Enter Current Voltage  Volt"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/_6sdp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/darkBlack"
+                        android:textColorHint="@color/darkBlack"
+                        android:visibility="visible" />
+
+                    <TextView
+                        fontPath="@string/medium_font"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:layout_marginBottom="@dimen/_6sdp"
+                        android:gravity="left"
+                        android:maxEms="12"
+                        android:text="@string/amps"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <EditText
+                        android:id="@+id/edt_pm_amp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_38sdp"
+                        android:background="@drawable/rounded_row_cust"
+                        android:ems="3"
+                        android:hint="Enter Amps AMP"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/_6sdp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/darkBlack"
+                        android:textColorHint="@color/darkBlack"
+                        android:visibility="visible" />
+
+                    <TextView
+                        fontPath="@string/medium_font"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:layout_marginBottom="@dimen/_6sdp"
+                        android:gravity="left"
+                        android:maxEms="12"
+                        android:text="@string/temprature"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <EditText
+                        android:id="@+id/edt_pm_temperature"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_38sdp"
+                        android:background="@drawable/rounded_row_cust"
+                        android:ems="3"
+                        android:hint="Enter Cabin Temperature*C"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/_6sdp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/darkBlack"
+                        android:textColorHint="@color/darkBlack"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/viewWorkStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="@string/work_status"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:id="@+id/radioPMStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/ra_yes_pm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/red"
+                                android:text="Pending" />
+
+                            <RadioButton
+                                android:id="@+id/ra_no_pm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:checked="true"
+                                android:text="Closed" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/viewPendingReason"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/edt_reason_pending"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_68sdp"
+                            android:layout_margin="@dimen/_6sdp"
+                            android:background="@drawable/rounded_row_cust"
+                            android:ems="3"
+                            android:gravity="top"
+                            android:hint="Enter Reason for Pending"
+                            android:inputType="textMultiLine"
+                            android:padding="@dimen/_6sdp"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/darkBlack"
+                            android:textColorHint="@color/darkBlack" />
+
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/viewPendingDrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:visibility="gone"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="6dp"
+                            card_view:cardElevation="2dp"
+                            card_view:cardUseCompatPadding="true">
+
+                            <TextView
+                                android:id="@+id/etPendingSPare"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_32sdp"
+                                android:background="@android:color/transparent"
+                                android:drawableRight="@drawable/ic_keyboard_arrow_down"
+                                android:gravity="center_vertical"
+                                android:hint="Select Spare Request"
+                                android:paddingLeft="@dimen/_7sdp"
+                                android:paddingRight="@dimen/_7sdp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray" />
+
+                        </android.support.v7.widget.CardView>
+
+                        <EditText
+                            android:id="@+id/edt_Other_pending_spare"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_68sdp"
+                            android:layout_margin="@dimen/_6sdp"
+                            android:background="@drawable/rounded_row_cust"
+                            android:ems="3"
+                            android:gravity="top"
+                            android:visibility="gone"
+                            android:hint="Enter Other Reason"
+                            android:inputType="textMultiLine"
+                            android:padding="@dimen/_6sdp"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/darkBlack"
+                            android:textColorHint="@color/darkBlack" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/work_done"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_16sdp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/lytPM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:visibility="visible"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="6dp"
+                        card_view:cardElevation="2dp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <TextView
+                            android:id="@+id/etSelectPM"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_32sdp"
+                            android:background="@android:color/transparent"
+                            android:drawableRight="@drawable/ic_keyboard_arrow_down"
+                            android:gravity="center_vertical"
+                            android:hint="Select Work Type"
+                            android:paddingLeft="@dimen/_7sdp"
+                            android:paddingRight="@dimen/_7sdp"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray" />
+
+                    </android.support.v7.widget.CardView>
+
+                    <EditText
+                        android:id="@+id/edt_comment_PM"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_68sdp"
+                        android:layout_margin="@dimen/_6sdp"
+                        android:background="@drawable/rounded_row_cust"
+                        android:ems="3"
+                        android:gravity="top"
+                        android:hint="Write a comment"
+                        android:inputType="textMultiLine"
+                        android:padding="@dimen/_6sdp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/darkBlack"
+                        android:textColorHint="@color/darkBlack"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lytBM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:visibility="visible"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="6dp"
+                        card_view:cardElevation="2dp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <TextView
+                            android:id="@+id/etSelectBM"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_32sdp"
+                            android:background="@android:color/transparent"
+                            android:drawableRight="@drawable/ic_keyboard_arrow_down"
+                            android:gravity="center_vertical"
+                            android:hint="Select Work Type"
+                            android:paddingLeft="@dimen/_7sdp"
+                            android:paddingRight="@dimen/_7sdp"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray" />
+
+                    </android.support.v7.widget.CardView>
+
+                    <EditText
+                        android:id="@+id/edt_comment_BMCall"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_68sdp"
+                        android:layout_margin="@dimen/_6sdp"
+                        android:background="@drawable/rounded_row_cust"
+                        android:ems="3"
+                        android:gravity="top"
+                        android:hint="Write a comment"
+                        android:inputType="textMultiLine"
+                        android:padding="@dimen/_6sdp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/darkBlack"
+                        android:textColorHint="@color/darkBlack"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/lytBMSpare"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:visibility="visible"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="6dp"
+                            card_view:cardElevation="2dp"
+                            card_view:cardUseCompatPadding="true">
+
+                            <TextView
+                                android:id="@+id/etSelectBMSpare"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_32sdp"
+                                android:background="@android:color/transparent"
+                                android:drawableRight="@drawable/ic_keyboard_arrow_down"
+                                android:gravity="center_vertical"
+                                android:hint="Select Spares Used"
+                                android:paddingLeft="@dimen/_7sdp"
+                                android:paddingRight="@dimen/_7sdp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray" />
+
+                        </android.support.v7.widget.CardView>
+
+                        <EditText
+                            android:id="@+id/edt_comment_BMSpare"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_68sdp"
+                            android:layout_margin="@dimen/_6sdp"
+                            android:background="@drawable/rounded_row_cust"
+                            android:ems="3"
+                            android:gravity="top"
+                            android:hint="Write a comment"
+                            android:inputType="textMultiLine"
+                            android:padding="@dimen/_6sdp"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/darkBlack"
+                            android:textColorHint="@color/darkBlack"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/viewPhotoDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/lay_qrname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tilechiller"
+                            fontPath="@string/medium_font"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="Attach Photo"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lay_chiller_img"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/btn_rectangle"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_150sdp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/layoutImagechiller"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:src="@drawable/photo" />
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="Capture Image"
+                                    android:textColor="@color/colorPrimaryDark" />
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:id="@+id/layout_pager_chiller"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+                                <android.support.v4.view.ViewPager
+                                    android:id="@+id/viewPager_chiller"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_150sdp"
+                                    android:layout_gravity="bottom"
+                                    android:clipToPadding="false" />
+
+                                <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                                    android:id="@+id/dots_indicators_chiller"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center"
+                                    android:layout_marginBottom="@dimen/_6sdp"
+                                    android:gravity="bottom"
+                                    android:visibility="gone"
+                                    app:dotsColor="@color/colorPrimary"
+                                    app:dotsCornerRadius="8dp"
+                                    app:dotsSize="10dp"
+                                    app:dotsSpacing="4dp"
+                                    app:dotsWidthFactor="2.5"
+                                    app:progressMode="true"
+                                    app:selectedDotColor="@color/colorPrimary" />
+                            </FrameLayout>
+
+                            <com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton
+                                android:id="@+id/btnAddChiller"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|end"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="14dp"
+                                android:visibility="visible"
+                                app:fabColor="@color/colorPrimary"
+                                app:fabElevation="2dp"
+                                app:fabIcon="@drawable/ic_add_white"
+                                app:fabIconPosition="start"
+                                app:fabSizes="mini"
+                                app:fabType="circle" />
+                        </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lytInspection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:visibility="visible"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="6dp"
+                        card_view:cardElevation="2dp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <EditText
+                            android:id="@+id/etSelectInspServAudit"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_32sdp"
+                            android:background="@android:color/transparent"
+                            android:gravity="center_vertical"
+                            android:hint="Service Ticket Audit"
+                            android:paddingLeft="@dimen/_7sdp"
+                            android:paddingRight="@dimen/_7sdp"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray" />
+
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="Any dispute"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:id="@+id/radioNational"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/ra_yes_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Yes" />
+
+                            <RadioButton
+                                android:id="@+id/ra_no_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:checked="true"
+                                android:text="No" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/edt_comment_InspectYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_68sdp"
+                        android:layout_margin="@dimen/_6sdp"
+                        android:background="@drawable/rounded_row_cust"
+                        android:ems="3"
+                        android:gravity="top"
+                        android:hint="Write a comment"
+                        android:inputType="textMultiLine"
+                        android:padding="@dimen/_6sdp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/darkBlack"
+                        android:textColorHint="@color/darkBlack"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lytAudit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:visibility="visible"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="6dp"
+                        card_view:cardElevation="2dp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <EditText
+                            android:id="@+id/etSelectAssetNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_32sdp"
+                            android:background="@android:color/transparent"
+                            android:gravity="center_vertical"
+                            android:hint="Asset number as per the system"
+                            android:paddingLeft="@dimen/_7sdp"
+                            android:paddingRight="@dimen/_7sdp"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray" />
+
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="Any dispute"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:id="@+id/radioAsset"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/ra_yes_asset"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Yes" />
+
+                            <RadioButton
+                                android:id="@+id/ra_no_asset"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:checked="true"
+                                android:text="No" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/edt_comment_AssetYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_68sdp"
+                        android:layout_margin="@dimen/_6sdp"
+                        android:background="@drawable/rounded_row_cust"
+                        android:ems="3"
+                        android:gravity="top"
+                        android:hint="Write a comment"
+                        android:inputType="textMultiLine"
+                        android:padding="@dimen/_6sdp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/darkBlack"
+                        android:textColorHint="@color/darkBlack"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        fontPath="@string/medium_font"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:text="@string/tech_rating"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/black" />
+
+                    <RatingBar
+                        android:id="@+id/ratingBarBehavior"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        fontPath="@string/medium_font"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:text="Customer Rating on Service Quality"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/black" />
+
+                    <RatingBar
+                        android:id="@+id/ratingBarQuality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        fontPath="@string/medium_font"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:text="@string/customer_sign"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/black" />
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_48sdp"
+                        android:layout_weight="0.5"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="6dp"
+                        card_view:cardElevation="2dp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <ImageView
+                            android:id="@+id/et_bh_signature"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_36sdp"
+                            android:background="@android:color/transparent"
+                            android:gravity="center_vertical"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/_7sdp"
+                            android:paddingRight="@dimen/_7sdp"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray" />
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btnTransferPre"
+                        fontPath="@string/bold_font"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_red"
+                        android:gravity="center"
+                        android:text="Previous"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/btnSubmit"
+                        fontPath="@string/bold_font"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_red"
+                        android:gravity="center"
+                        android:text="SUBMIT"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorWhite" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "972568890365",
+    "project_id": "riham-25bf5",
+    "storage_bucket": "riham-25bf5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:972568890365:android:d1a9b7f53bd80def352794",
+        "android_client_info": {
+          "package_name": "com.mobiato.sfa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "972568890365-1r4d6uftueh1mj0k9fetqcglnerguo1n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobiato.sfa",
+            "certificate_hash": "2cc91f085eef938d68c9284cc90c52737adaac5b"
+          }
+        },
+        {
+          "client_id": "972568890365-gvsjh567mmci1usvd4avt1fiaitii89b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobiato.sfa",
+            "certificate_hash": "76d1dd2caa1b60d40346ece89bc33cab7e5933e9"
+          }
+        },
+        {
+          "client_id": "972568890365-9mkrjd706glrp19vp5qd2ijcfked4fau.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUKkAodj4E0n5X2q3oDYJEjVipD-qoFSY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "972568890365-9mkrjd706glrp19vp5qd2ijcfked4fau.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

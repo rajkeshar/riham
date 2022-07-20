@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mobiato.sfa">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--
+<permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:label="INTERNET Access"
+        android:permissionGroup="android.permission.internet" /> &lt;!&ndash; Accessing camera hardware &ndash;&gt;
+    -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- Step 1: Add the following permission to the app -->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+
+    <uses-feature android:name="android.hardware.camera.front" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".AppController"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon">
+        <activity
+            android:name=".activity.AddSalesmanLoadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SalesmanLoadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.DepotListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.InputDialogReturnActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+        <activity
+            android:name=".activity.DiscountDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.servicevisit.PendingBDActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShowMapCustomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.servicevisit.ServiceVisitThreeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.servicevisit.ServiceVisitTwoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.servicevisit.ServiceEquipmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AddFridgeThreeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddFridgeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DiscountMasterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MasterDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.DeliveryDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.DeliveryListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.InputDialogPromotionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+        <activity
+            android:name=".activity.ReturnUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.CameraSerialFormActivity" />
+        <activity
+            android:name=".activity.NotificationDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DigitSignatureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+        <activity
+            android:name=".merchandising.ReturnRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.ReturnDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.ReturnMerchandiserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MultiCollectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.AddPromotionalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.PromotionalListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.MerchantDataPostingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.CustomerProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.AddDistributionImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.DiskAreaCheck"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.StoreCheckBrandActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.InventoryCheckActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.SensoryListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.StockCheck_Questions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.AssetsDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.AssetsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.AddPlanogramActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.PlanogramListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.AddCampaignActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.CampaignListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.AddComplaintFeedbackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.ComplaintListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.CustomerOperationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.JourneyPlanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.AddCompetitiorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.CompetitorInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandising.MerchantDashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TransactionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DeliveryConfirmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DeliveryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoadRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BadReturnActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.InputDialogOrderActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+        <activity
+            android:name=".activity.LoadVerifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DownloadingDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SimpleScannerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CameraFormActivity"
+            android:screenOrientation="portrait" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".activity.CustomerLocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AllItemsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FreshUnloadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.InputDialogActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+        <activity
+            android:name=".activity.ExchangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OrderRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ReturnActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PaymentDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CollectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DataPostingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SalesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CustomerDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ManageInventoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddNewCustomerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fragments.DashboardFragment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.forms.FormsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.forms.TransferForms.ChillerTransferFormActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.forms.TransferForms.ChillerTransferFormTwoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.forms.TransferForms.ChillerTransferFormThreeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.forms.TransferForms.ChillerTransferFormFourActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.forms.RequestForms.ChillerRequestFormActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.forms.RequestForms.ChillerRequestFormTwoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.forms.RequestForms.ChillerRequestFormThreeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.forms.RequestForms.ChillerRequestFormFourActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.forms.ServiesForms.ChillerServiceFormActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.forms.ServiesForms.ChillerServiceFormTwoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.forms.ServiesForms.ChillerServiceFormThreeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.forms.ServiesForms.ChillerServiceFormFourActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.UpdateCustomer.UpdateExistingCustomerActivity" />
+        <activity android:name=".activity.UpdateCustomer.SimpleUpdateScannerActivity" />
+        <activity android:name=".Techinician.fragment.TechnicianDashboardFragment" />
+        <activity android:name=".Techinician.fragment.TechnicianChillerListFragment" />
+        <activity android:name=".Techinician.fragment.TechnicianCustomerListFragment" />
+        <activity android:name=".Techinician.CustomerTechnicianLocationActivity" />
+        <activity android:name=".Techinician.NotificationTechnicianActivity" />
+        <activity android:name=".Techinician.fragment.CustomerAgreementActivity" />
+        <activity android:name=".Techinician.fragment.Customers.CustomerHistoryFormActivity" />
+        <activity android:name=".activity.AddChillerFormActivity" />
+        <activity android:name=".activity.SimpleScannerChillerActivity" />
+        <activity
+            android:name=".activity.forms.ServiesForms.ChillerServiceFormFiveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FragmentJourneyPlan"
+            android:screenOrientation="portrait" /> <!-- SERVICES -->
+        <service
+            android:name=".firebase.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+<service android:name=".firebase.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        -->
+        <service android:name=".rest.SyncData" />
+        <service
+            android:name=".rest.BackgroundJob"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service android:name=".rest.BackgroundSync" />
+
+        <receiver
+            android:name=".rest.ConnectionChangeReceiver"
+            android:label="NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="1" />
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBUKkAodj4E0n5X2q3oDYJEjVipD-qoFSY" />
+    </application>
+
+</manifest>

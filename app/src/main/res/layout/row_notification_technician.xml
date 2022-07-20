@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.mobiato.sfa.model.NotificationTechnician" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardBackgroundColor="@android:color/white"
+            card_view:cardCornerRadius="6dp"
+            card_view:cardElevation="2dp"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgColor"
+                        android:layout_width="6dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/progress1" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_weight="10"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="7"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_agetname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{item.ir_code}"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:textColor="#363635"
+                                tools:text="2773733838" />
+
+                            <TextView
+                                android:id="@+id/tvCustomername"
+                                fontPath="@string/medium_font"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:text=""
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:textColor="@color/darkBlack"
+                                tools:text="V. Mart" />
+
+                            <TextView
+                                android:visibility="gone"
+                                android:id="@+id/tvCustomerOutlet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:text=""
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:textColor="@color/darkBlack"
+                                tools:text="V. Mart" />
+                            <LinearLayout
+                                android:visibility="visible"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/btnAccept"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_32sdp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginRight="@dimen/_8sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/btn_red"
+                                    android:gravity="center"
+                                    android:text="Accept"
+                                    android:textAllCaps="false"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colorWhite" />
+
+                                <TextView
+                                    android:id="@+id/btnReject"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_32sdp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginRight="@dimen/_8sdp"
+                                    android:layout_marginBottom="@dimen/_8sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/btn_red"
+                                    android:gravity="center"
+                                    android:text="Reject"
+                                    android:textAllCaps="false"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colorWhite" />
+
+                                <TextView
+                                    android:id="@+id/btnReschedule"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_32sdp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginRight="@dimen/_8sdp"
+                                    android:layout_marginBottom="@dimen/_8sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/btn_red"
+                                    android:gravity="center"
+                                    android:text="Reschedule"
+                                    android:textAllCaps="false"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colorWhite" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="3"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_new"
+                                android:layout_width="@dimen/_33sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:visibility="gone"
+                                android:layout_gravity="top|right"
+                                android:background="@drawable/ic_bg_new">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/_1sdp"
+                                    android:text="NEW"
+                                    android:textColor="@color/white_100"
+                                    android:textSize="@dimen/_7sdp"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|right"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:visibility="gone"
+                                    android:id="@+id/ivCheckIn"
+                                    android:layout_width="@dimen/_22sdp"
+                                    android:layout_height="@dimen/_22sdp"
+                                    android:paddingLeft="@dimen/_2sdp"
+                                    android:paddingRight="@dimen/_2sdp"
+                                    android:src="@drawable/icon_checkin" />
+
+                                <ImageView
+                                    android:id="@+id/ivMap"
+                                    android:layout_width="@dimen/_26sdp"
+                                    android:layout_height="@dimen/_26sdp"
+                                    android:layout_marginRight="@dimen/_6sdp"
+                                    android:paddingLeft="@dimen/_2sdp"
+                                    android:paddingRight="@dimen/_2sdp"
+                                    app:srcCompat="@drawable/ic_map" />
+                            </LinearLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/img_small_order"
+                            android:layout_width="@dimen/_21sdp"
+                            android:layout_height="@dimen/_21sdp"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_icon_order_ring" />
+
+                        <ImageView
+                            android:id="@+id/img_small_collection"
+                            android:layout_width="@dimen/_21sdp"
+                            android:layout_height="@dimen/_21sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_icon_collection_ring" />
+
+                        <ImageView
+                            android:id="@+id/img_small_sales"
+                            android:layout_width="@dimen/_21sdp"
+                            android:layout_height="@dimen/_21sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_icon_sales_rign" />
+
+                        <ImageView
+                            android:id="@+id/img_small_delivey"
+                            android:layout_width="@dimen/_21sdp"
+                            android:layout_height="@dimen/_21sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_icon_delivery_ring" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</layout>
+
+

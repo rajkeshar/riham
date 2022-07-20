@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.FragmentJourneyPlan">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.mobiato.sfa.model.Customer" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_100">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_header"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Toolbar Title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sdp" />
+
+        </android.support.v7.widget.Toolbar>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:orientation="vertical">
+
+            <!-- Toolbar Background -->
+            <RelativeLayout
+                android:id="@+id/rl_toolbar_container"
+                android:layout_width="wrap_content"
+                android:layout_height="165dp"
+                android:visibility="gone"
+                android:background="#00000000">
+
+                <ImageView
+                    android:id="@+id/imageViewplaces"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/bg_body" />
+
+                <!-- Header RecycelrView horizontal image and text -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerview_recent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:scrollbars="horizontal"
+                        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+                </LinearLayout>
+
+                <!-- ALL BUTTON CONTAINER -->
+                <RelativeLayout
+                    android:id="@+id/ll_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true">
+
+                    <LinearLayout
+                        android:id="@+id/ll_butons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:visibility="invisible"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/btnSequence"
+                            fontPath="@string/medium_font"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_32sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:background="@drawable/rounded_tab_unselect"
+                            android:gravity="center"
+                            android:text="Today"
+                            android:layout_weight="1"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/progress1"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/btnAll"
+                            fontPath="@string/medium_font"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_32sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_tab_select"
+                            android:gravity="center"
+                            android:text="Route"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:id="@+id/btnDepot"
+                            fontPath="@string/medium_font"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_32sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:background="@drawable/rounded_tab_select"
+                            android:gravity="center"
+                            android:text="Depot"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!---OTC -->
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:id="@+id/ll_tab_otc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true">
+
+                <LinearLayout
+                    android:id="@+id/ll_butons_otc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btnOTC"
+                        fontPath="@string/medium_font"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:background="@drawable/rounded_tab_unselect"
+                        android:gravity="center"
+                        android:text="OTC Customer"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/progress1"
+                        android:visibility="visible" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/otc_customer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="false"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgColor"
+                                android:layout_width="6dp"
+                                android:layout_height="fill_parent"
+                                android:background="@color/progress1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.github.ivbaranov.mli.MaterialLetterIcon
+                                android:id="@+id/imageView2"
+                                android:layout_width="@dimen/_44sdp"
+                                android:layout_height="@dimen/_44sdp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8"
+                            android:orientation="vertical"
+                            android:paddingTop="@dimen/_5sdp"
+                            android:paddingBottom="@dimen/_5sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="fill_parent"
+                                    android:layout_weight="7"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvId"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                        android:textColor="#363635"
+                                        tools:text="2773733otc838" />
+
+                                    <TextView
+                                        android:id="@+id/tvName"
+                                        fontPath="@string/medium_font"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_1sdp"
+                                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                        android:textColor="@color/darkBlack"
+                                        tools:text="V. Mart" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_1sdp"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_14sdp"
+                                            android:layout_height="@dimen/_14sdp"
+                                            app:srcCompat="@drawable/ic_call_black" />
+
+                                        <TextView
+                                            android:id="@+id/tvPhone"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="8dp"
+                                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                            android:textColor="@color/darkBlack"
+                                            tools:text="23123131" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:orientation="horizontal"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:id="@+id/img_small_order"
+                                    android:layout_width="@dimen/_21sdp"
+                                    android:layout_height="@dimen/_21sdp"
+                                    android:visibility="gone"
+                                    app:srcCompat="@drawable/ic_icon_order_ring" />
+
+                                <ImageView
+                                    android:id="@+id/img_small_collection"
+                                    android:layout_width="@dimen/_21sdp"
+                                    android:layout_height="@dimen/_21sdp"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:visibility="gone"
+                                    app:srcCompat="@drawable/ic_icon_collection_ring" />
+
+                                <ImageView
+                                    android:id="@+id/img_small_sales"
+                                    android:layout_width="@dimen/_21sdp"
+                                    android:layout_height="@dimen/_21sdp"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:visibility="gone"
+                                    app:srcCompat="@drawable/ic_icon_sales_rign" />
+
+                                <ImageView
+                                    android:id="@+id/img_small_delivey"
+                                    android:layout_width="@dimen/_21sdp"
+                                    android:layout_height="@dimen/_21sdp"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:visibility="gone"
+                                    app:srcCompat="@drawable/ic_icon_delivery_ring" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <!-- MAIN RECYCLER VIEW CONTAINER-->
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:visibility="visible"
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/_3sdp">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerview_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:paddingBottom="@dimen/_30sdp"
+                        android:scrollbars="vertical"
+                        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+                    <ProgressBar
+                        android:id="@+id/pg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+
+        </LinearLayout>
+
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:visibility="gone"
+            app:backgroundTint="@color/progress1"
+            app:elevation="@dimen/_11sdp"
+            app:srcCompat="@drawable/ic_add_white" />
+
+
+    </RelativeLayout>
+
+</layout>

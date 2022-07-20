@@ -1,0 +1,39 @@
+<resources>
+
+    <attr name="label" format="string" />
+    <attr name="text" format="string" />
+
+    <declare-styleable name="TextViewBehviour">
+        <attr name="finalYPosition" format="dimension" />
+        <attr name="startXPosition" format="dimension" />
+        <attr name="startToolbarPosition" format="dimension" />
+        <attr name="startHeight" format="dimension" />
+        <attr name="finalHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TileView">
+        <attr name="label" />
+        <attr name="square" format="boolean" />
+        <attr name="mybackground" format="color" />
+        <attr name="myicon" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="TextViewWithLabel">
+        <attr name="label" />
+        <attr name="text" />
+        <attr name="hideOnEmpty" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundProgressBar">
+        <attr name="tlcp_strokeWidth" format="dimension" />
+        <attr name="tlcp_text" format="reference" />
+        <attr name="tlcp_textSize" format="dimension" />
+        <attr name="tlcp_drawable" format="reference" />
+        <attr name="tlcp_progress_color" format="reference" />
+        <attr name="tlcp_progress2_color" format="reference" />
+        <attr name="tlcp_bg_color" format="reference" />
+        <attr name="tlcp_progress" format="integer" />
+        <attr name="tlcp_progress2" format="integer" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="drawerItem"
+            type="com.mobiato.sfa.model.DrawerItem" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="13dp">
+
+            <ImageView
+                android:id="@+id/ivSymbol"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:tint="#A0A0A0"
+                android:layout_centerVertical="true"
+                tools:src="@mipmap/ic_launcher_round" />
+
+            <TextView
+                fontPath="@string/medium_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="14dp"
+                android:layout_marginLeft="14dp"
+                android:layout_toEndOf="@+id/ivSymbol"
+                android:layout_toRightOf="@+id/ivSymbol"
+                android:text="@{drawerItem.name}"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                tools:text="My Profile" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/darkBlack" />
+
+    </LinearLayout>
+
+</layout>
